@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            background: #4F5D75;
+            color: #F4F2F3;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .weather__headline {
+            font-size: 24px;
+            text-align: center;
+        }
+        .weather__table {
+            border-spacing: 10px;
+        }
+        .weather__point {
+            width: 45%;
+            font-size: 18px;
+        }
+        .weather__value {
+            font-size: 20px;
+            font-weight: bold;
+            vertical-align: bottom;
+            text-align: center;
+        }
+    </style>
+    <title>Moscow Weather</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1 class="weather__headline">Погода в Москве:</h1>
+    <table class="weather__table">
+        <tr class="weather__row">
+            <td class="weather__point">Максимальное давление в ближайшие 5 дней:</td>
+            <td class="weather__value" id="max-pressure">loading...</td>
+        </tr>
+        <tr class="weather__row">
+            <td class="weather__point">Минимальная разница между ночной и утренней температурой:</td>
+            <td class="weather__value" id="min-temperature">loading...</td>
+        </tr>
+    </table>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
