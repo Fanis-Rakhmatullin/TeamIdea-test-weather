@@ -19,8 +19,8 @@ function findMaxPressure(weatherDaysArray) {
 function findMinTemperatureDifference(weatherDaysArray) {
     const dayWithMinTempDiff = weatherDaysArray
         .reduce((result, day, index) => {
-            if (Math.abs(day.temp.night - day.temp.morn) < result.minValue) {
-                result.minValue = Math.abs(day.temp.night - day.temp.morn);
+            if (Math.abs(day.temp.night - day.temp.morn) < Math.abs(result.minValue)) {
+                result.minValue = day.temp.night - day.temp.morn;
                 result.index = index;
             }
             return result;
